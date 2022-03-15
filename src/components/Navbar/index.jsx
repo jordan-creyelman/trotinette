@@ -5,7 +5,7 @@ import "./index.css"
 function Navbar() {
   return (
     <div className="navbar">
-        <Link to="/">Ascueil</Link> 
+        <Link to="/">Accueil</Link> 
         <Link to="/sign_up">Inscription</Link> 
         <Link to="/sign_in">Connexion</Link> 
         <Link to="/sign_out">Deconnexion</Link>
