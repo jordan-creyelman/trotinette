@@ -16,8 +16,8 @@ import "./index.css";
 import Home from "../../Pages/Home";
 
 
-const pages = ["Accueil", "Contact", "About"];
-const settings = ["Profil", "Favoris", "New bouton", "Se déconnecter"];
+const pages = ["Trotti'NET", "Contact", "À propos"];
+const settings = ["Profil", "Favoris", "Login", "Déconnecter"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -92,7 +92,7 @@ const Navbar = () => {
               </Button>
             ))}
           </Box>
-
+          <h1 color="black">Trotti'NET</h1>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Profil">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
