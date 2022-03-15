@@ -22,9 +22,9 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} /> 
-            <Route path="/sign_up" element={<SignUp />} /> 
-            <Route path="/sign_in" element={<SignIn />} /> 
-            <Route path="/sign_out" element={<SignOut />} />
+            <Route path="/inscription" element={<SignUp />} /> 
+            <Route path="/connexion" element={<SignIn />} /> 
+            <Route path="/deconnexion" element={<SignOut />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/articles" element={<Articles />} />
             <Route path="/contact" element={<Contact />} />
