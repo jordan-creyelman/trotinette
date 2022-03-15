@@ -12,6 +12,7 @@ import Articles from './Pages/Articles';
 import Profile from './Pages/Profile';
 // import { UserContext } from './UserContext';
 // import SearchBar from './components/SearchBar';
+import Footer from './components/Footer/index';
 
 function App() {
   return (
@@ -20,16 +21,17 @@ function App() {
       
         <Router>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} /> 
-            <Route path="/inscription" element={<SignUp />} /> 
-            <Route path="/connexion" element={<SignIn />} /> 
-            <Route path="/deconnexion" element={<SignOut />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/articles" element={<Articles />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
+            <Routes>
+              <Route path="/" element={<Home />} /> 
+              <Route path="/inscription" element={<SignUp />} /> 
+              <Route path="/connexion" element={<SignIn />} /> 
+              <Route path="/deconnexion" element={<SignOut />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/articles" element={<Articles />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/a_propos" element={<About />} />
+            </Routes>
+          <Footer />
         </Router>
       
     </div>

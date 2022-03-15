@@ -20,24 +20,31 @@
   margin: 2px;
 }
 
-/* .MuiBox-root{
-  justify-content: space-evenly !important;
-} */
-
 img{
   width: 4rem;
+  margin-left: 50px;
 }
 
 .MuiAvatar-root{
   background-color: #038f2f!important;
+  color: black !important;
+  margin-right: 30px;
 }
 
 .MuiButton-root{
   left: 40px !important;
   margin-left: 20px !important;
+  border: 5px !important;
+  color: black !important;
 }
 
 .MuiButtonBase{
   left: 40px !important;
   margin-left: 40px;
+  color: black !important;
+}
+
+h1 {
+  color:black;
+  margin-right: 42% ;
 }
