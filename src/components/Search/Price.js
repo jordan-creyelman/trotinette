@@ -6,18 +6,18 @@
   var find = false; 
   var tour = false
   var pricePlus=0;
-  while (i <arrayScooter.length&&find==false){  
+  while (i <arrayScooter.length&&find===false){  
           
-      if(Math.round(arrayScooter[i].price)==price ||Math.round(arrayScooter[i].price)==pricePlus){
+      if(Math.round(arrayScooter[i].price)===price ||Math.round(arrayScooter[i].price)===pricePlus){
           results.push(i); 
       }
-      if(results.length ==2){
+      if(results.length ===2){
         find =true;
       }
-      if(i==arrayScooter.length-1&&find ==false){
+      if(i===arrayScooter.length-1&&find ===false){
         i=-1;
         price =price -1;
-        if(tour ==false){
+        if(tour ===false){
           tour =true
           pricePlus= price +2;
         }
@@ -35,7 +35,7 @@
   while (x<arrayScooter.length){
         y=0;
         while(y<results.length){
-          if(x ==results[y]){
+          if(x ===results[y]){
             final_results.push(arrayScooter[x]);
           }
           y++;
