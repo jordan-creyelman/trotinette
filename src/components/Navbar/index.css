@@ -1,22 +1,50 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    background-color: $color-dark;
-    position: fixed;
-    top: 0;
-    width: 50%;
-    border-bottom: solid 0.25rem $color-light;
-  }
+.MuiPaper-root {
+  background: rgb(54, 119, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(54, 119, 0, 1) 0%,
+    rgba(26, 177, 0, 1) 4%,
+    rgba(50, 179, 3, 1) 44%,
+    rgba(50, 179, 3, 1) 48%,
+    rgba(26, 177, 0, 1) 96%,
+    rgba(15, 142, 0, 1) 100%
+  );
+}
 
-  .navbar a {
-    text-decoration: none;
-    text-align: center;
-    float: left;
-    display: block;
-    color: $color-light;
-    font-family: "PT Sans Caption", sans-serif;
-    padding: 5px 20px;
-    font-size: 17px;
-  }
+.css-6hp17o {
+  background: green!important;
+}
+
+.MuiButton-root {
+  background-color: #038f2f!important;
+  margin: 2px;
+}
+
+img{
+  width: 4rem;
+  margin-left: 50px;
+}
+
+.MuiAvatar-root{
+  background-color: #038f2f!important;
+  color: black !important;
+  margin-right: 30px;
+}
+
+.MuiButton-root{
+  left: 40px !important;
+  margin-left: 20px !important;
+  border: 5px !important;
+  color: black !important;
+}
+
+.MuiButtonBase{
+  left: 40px !important;
+  margin-left: 40px;
+  color: black !important;
+}
+
+h1 {
+  color:black;
+  margin-right: 42% ;
+}
