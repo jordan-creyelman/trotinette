@@ -1,0 +1,10 @@
+.card {
+    margin: 5rem;
+    width: 18rem;
+}
+
+.card_img {
+    margin: 0rem;
+    size: 286x180;
+    position: relative;
+}
