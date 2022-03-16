@@ -1,11 +1,11 @@
 import React from 'react'
-import SearchBar from '../../components/SearchBar'
+import Search from '../../components/Search'
 import "./index.css"
 
 function Home() {
   return (
     <div className='home' >
-        <SearchBar />
+        <Search />
     </div>
   )
 }
