@@ -41,7 +41,6 @@ function SearchBar() {
     <div>
      <>
         <div className="searchBar">
-            <input type="text" name="searchBar" placeholder="Rechercher" />
             <input type="text" onChange={e => setPrice(e.target.value) } value={price} placeholder="Price"/><br />
             <button type="button" onClick={() => handleSearch() }>Register</button>
         </div>
