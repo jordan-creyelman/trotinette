@@ -6,16 +6,6 @@ import Cookies from 'js-cookie';
 import jwt_decode from "jwt-decode";
 import "./index.css"
 
-// function SignUp() {
-//   return (
-//     <div className='sign_up'>
-//         <h1>SignUp</h1>
-//     </div>
-//   )
-// }
-
-// export default SignUp
-
 const SignUp = () => {
 
     let navigate = useNavigate();
