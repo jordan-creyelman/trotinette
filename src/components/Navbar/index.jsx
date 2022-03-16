@@ -11,9 +11,9 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import img from "../img/logo trottinette.png";
+import img from "../../assets/Img/logo trottinette.png";
 import "./index.css";
-import Home from "../../Pages/Home";
+import Home from "../../pages/Home";
 
 
 const pages = ["Trotti'NET", "Contact", "À propos"];
@@ -42,7 +42,7 @@ const Navbar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src={img} />
+          <img src={img} alt="Logo de Trotti'NET"/>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }}}>
             <IconButton
