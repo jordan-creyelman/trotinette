@@ -1,12 +1,14 @@
  const Price  =(arrayScooter,price) =>{
   price=Math.round(price)
+  console.log(price)
   var i = 0;
   var results=[];
   var find = false; 
   var tour = false
   var pricePlus=0;
-  while (i <arrayScooter.length&&find==false){      
-      if(arrayScooter[i].price==price ||arrayScooter[i].price==pricePlus){
+  while (i <arrayScooter.length&&find==false){  
+          
+      if(Math.round(arrayScooter[i].price)==price ||Math.round(arrayScooter[i].price)==pricePlus){
           results.push(i); 
       }
       if(results.length ==2){
