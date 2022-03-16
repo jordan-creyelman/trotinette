@@ -16,32 +16,32 @@ export default function Footer() {
             <Grid item xs={12} sm={4}>
               <Box>
                 <Link href="/contact">
-                  <h3>Contact</h3>
+                  <h4>Contact</h4>
                 </Link>
               </Box>
             </Grid>
             <Grid item xs={12} sm={4}>
               <Box>
                 <Link href="/inscription">
-                  <h3>Inscription</h3>
+                  <h4>Inscription</h4>
                 </Link>
               </Box>
               <Box>
                 <Link href="/connexion">
-                  <h3>Se Connecter</h3>
+                  <h4>Se Connecter</h4>
                 </Link>
               </Box>
             </Grid>
             <Grid item xs={12} sm={4}>
               <Box>
                 <Link href="/a_propos">
-                  <h3>À Propos</h3>
+                  <h4>À Propos</h4>
                 </Link>
               </Box>
             </Grid>
           </Grid>
           <Box textAlign="center" color="black" height={2} pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
-            <h3>Trotti'NET &reg; {new Date().getFullYear()}</h3>
+            <h4>Trotti'NET &reg; {new Date().getFullYear()}</h4>
           </Box>
         </Container>
       </Box>
