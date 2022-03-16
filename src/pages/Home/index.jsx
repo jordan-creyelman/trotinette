@@ -1,4 +1,6 @@
 import React from 'react'
+import Search from '../../components/Search'
+
 import { useEffect } from 'react';
 import { useState } from 'react';
 import SearchBar from '../../components/SearchBar'
@@ -26,12 +28,14 @@ function Home() {
   }, []);
 
   return (
+
     <>
         <div className='home' >
-            <SearchBar />
+            <Search />
         </div>
     </>
   );
+
 }
 
 export default Home

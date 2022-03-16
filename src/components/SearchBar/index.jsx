@@ -22,10 +22,15 @@ function SearchBar() {
   //   fetchPost();
   // }, []);
 
+
+
+
+
   return (
     <>
         <div className="searchBar">
             <input type="text" name="searchBar" placeholder="Rechercher" />
+            
         </div>
         <div className="search__results">
             
