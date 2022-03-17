@@ -2,14 +2,14 @@
     background: rgb(54, 119, 0);
     background: linear-gradient(
     90deg,
-    rgba(54, 119, 0, 1) 0%,
+    #367700 0%,
     rgba(26, 177, 0, 1) 4%,
     rgba(50, 179, 3, 1) 44%,
     rgba(50, 179, 3, 1) 48%,
     rgba(26, 177, 0, 1) 96%,
     rgba(15, 142, 0, 1) 100%
   );
-    position:absolute;
+    position:relative;
         left:0;
         bottom:0;
         right:0;
