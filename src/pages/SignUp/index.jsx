@@ -35,7 +35,7 @@ const SignUp = () => {
   
     const fetchRegisterForm = (data) => {
       
-      fetch("https://api-trottinet.herokuapp.com/users", {
+      fetch("https://apitrottinet.herokuapp.com/users", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
