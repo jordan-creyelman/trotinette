@@ -1,0 +1,35 @@
+.Footer{
+    background: rgb(54, 119, 0);
+    background: linear-gradient(
+    90deg,
+    #367700 0%,
+    rgba(26, 177, 0, 1) 4%,
+    rgba(50, 179, 3, 1) 44%,
+    rgba(50, 179, 3, 1) 48%,
+    rgba(26, 177, 0, 1) 96%,
+    rgba(15, 142, 0, 1) 100%
+  );
+    
+  position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+
+    
+}
+    /* position:relative;
+        left:0;
+        bottom:0;
+        right:0;
+    padding-bottom: 0px; */
+
+
+.MuiBox-root{
+    padding-top: 0px !important;  
+}
+
+h4{
+    /* padding-top: 10px !important; */
+    color: black !important;
+}
+

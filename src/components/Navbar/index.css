@@ -1,0 +1,32 @@
+img{
+  width: 4rem;
+  margin-left: 60px;
+}
+
+.Container1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar {
+   background: rgb(54, 119, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(54, 119, 0, 1) 0%,
+    rgba(26, 177, 0, 1) 4%,
+    rgba(50, 179, 3, 1) 44%,
+    rgba(50, 179, 3, 1) 48%,
+    rgba(26, 177, 0, 1) 96%,
+    rgba(15, 142, 0, 1) 100% 
+    );
+    font-size: 20px !important;
+}
+
+.navbar>.container{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 60px;
+}
+.nav-link{
+  color: black !important;
+}
