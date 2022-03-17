@@ -9,18 +9,27 @@
     rgba(26, 177, 0, 1) 96%,
     rgba(15, 142, 0, 1) 100%
   );
-    position:relative;
+    
+  position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+
+    
+}
+    /* position:relative;
         left:0;
         bottom:0;
         right:0;
-    padding-bottom: 0px;
-}
+    padding-bottom: 0px; */
+
 
 .MuiBox-root{
     padding-top: 0px !important;  
 }
 
 h4{
-    padding-top: 10px !important;
+    /* padding-top: 10px !important; */
     color: black !important;
 }
+
