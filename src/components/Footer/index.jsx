@@ -16,26 +16,27 @@ export default function Footer() {
             <Grid item xs={12} sm={4}>
               <Box>
                 <Link href="/contact">
-                  <h4>Contact</h4>
+                  <div><h4>Contact</h4></div>
                 </Link>
               </Box>
             </Grid>
             <Grid item xs={12} sm={4}>
               <Box>
                 <Link href="/inscription">
-                  <h4>Inscription</h4>
+                  <div><h4>Inscription</h4></div>
                 </Link>
               </Box>
               <Box>
                 <Link href="/connexion">
-                  <h4>Se Connecter</h4>
+                  <div><h4>Se Connecter</h4></div>
                 </Link>
               </Box>
             </Grid>
             <Grid item xs={12} sm={4}>
               <Box>
                 <Link href="/a_propos">
-                  <h4>À Propos</h4>
+                  <div><h4>À Propos</h4></div>
+                  
                 </Link>
               </Box>
             </Grid>
