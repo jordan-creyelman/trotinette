@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Button, Card, Col, Row } from 'react-bootstrap';
 import Price from "./Price.js";
 import "./index.css";
 import Img from '../../assets/Img/test.png';
@@ -51,6 +51,7 @@ function SearchBar() {
                       <Card.Img variant="top" src={Img} alt="" className="card_img" />
                       <Card.Text>{post.description.substring(0, 100)+"..."}</Card.Text>
                       <Card.Text>Prix :{post.price} €</Card.Text>
+                      <Button variant="primary">Details</Button>
                     </Card.Body>
                     </Card>
                   </div>
@@ -64,13 +65,7 @@ function SearchBar() {
 }
 
 export default SearchBar;        
-            // <div className="container">                
-            //         <Card.Img variant="top" src={Img} alt="" className="card_img" />                    
-            //             <Card.Title>Trottinet</Card.Title>
-            //             <Card.Text>Prix : 500€</Card.Text>
-            //             <Button variant="primary">Details</Button>              
-            // </div>
-        
+            
    
 
 
