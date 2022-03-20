@@ -1,5 +1,5 @@
 import React from 'react'
-import CardArticle from '../../components/CardArticle';
+//import CardArticle from '../../components/CardArticle';
 import Search from '../../components/Search'
 
 // import { useEffect } from 'react';
@@ -34,9 +34,9 @@ function Home() {
         <div className='home' >
             <Search />            
         </div>
-        <div >            
+        {/* <div >            
             <CardArticle />
-        </div>
+        </div> */}
     </>
   );
 
