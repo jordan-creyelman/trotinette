@@ -10,8 +10,8 @@
     rgba(15, 142, 0, 1) 100%
   );
     
-  position: fixed;
-    height: 100px;
+  position: relative;
+    height: 196px;
     bottom: 0;
     width: 100%;
 
