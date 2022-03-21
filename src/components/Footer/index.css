@@ -10,30 +10,23 @@
     rgba(15, 142, 0, 1) 100%
   );
     
-  position: relative;
-    height: 196px;
-    bottom: 0;
-    width: 100%;
-
-    
+  position: absolute;
+  bottom: 0; 
+  width: 100%;
 }
-    /* position:relative;
-        left:0;
-        bottom:0;
-        right:0;
-    padding-bottom: 0px; */
 
+.contents {
+    flex: 1 0 auto;
+    }
 
 .MuiBox-root{
     padding-top: 0px !important;  
 }
 
 h4{
-    /* padding-top: 10px !important; */
     color: black !important;
 }
 
 .about {
     margin-bottom: 250px;
 }
-
