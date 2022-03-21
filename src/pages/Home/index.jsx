@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from '../../components/Banner';
 //import CardArticle from '../../components/CardArticle';
 import Search from '../../components/Search'
 
@@ -30,10 +31,11 @@ function Home() {
 
   return (
 
-    <>
+    <><Banner />
         <div className='home' >
             <Search />            
         </div>
+        
         {/* <div >            
             <CardArticle />
         </div> */}

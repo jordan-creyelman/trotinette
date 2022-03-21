@@ -13,8 +13,8 @@ import Profile from './pages/Profile';
 import Footer from './components/Footer/index';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import TrotiBar from './components/Navbar';
-
+// import TrotiBar from './components/Navbar';
+import Navbar from './components/Navbar_test/index';
 
 
 function App() {
@@ -24,7 +24,8 @@ function App() {
       
       <Provider store={store}> 
         <Router>
-          <TrotiBar />
+          {/* <TrotiBar /> */}
+          <Navbar/>
             <Routes>
               <Route path="/" element={<Home />} /> 
               <Route path="/inscription" element={<SignUp />} /> 

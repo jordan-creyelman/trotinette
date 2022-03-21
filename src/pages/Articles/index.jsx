@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, Row, Col, Container } from "react-bootstrap";
+import { Card, Col  } from "react-bootstrap";
 import Img from "../../assets/Img/test.png";
 import "./index.css";
 
@@ -10,14 +10,14 @@ export default function Articles() {
       <div className="Container1">
         <div className="img1">
           <Col>
-            <img src={Img} style={{ width: "180%" }} alt="Logo Trotti'NET"></img>
+            <img src={Img} style={{ width: "180%" }} alt="imgtrotti"></img>
           </Col>
         </div>
         <div className="cardbodytitle1">
           <Col>
             <div className="cardbodytitle">
               <Card.Body>
-                <h1>Trottinette V.12</h1>
+                <h1 style={{ color: "#78a638"}} >Trottinette V.12</h1>
               </Card.Body>
             </div>
             <div className="cardbodydescription">
