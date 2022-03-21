@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, Row, Col, Container } from "react-bootstrap";
+import { Card, Col  } from "react-bootstrap";
 import Img from "../../assets/Img/test.png";
 import "./index.css";
 
