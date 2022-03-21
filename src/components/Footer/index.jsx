@@ -20,7 +20,7 @@ export default function Footer() {
                 </Link>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={4}>
+            {/* <Grid item xs={12} sm={4}>
               <Box>
                 <Link href="/inscription">
                   <h4>Inscription</h4>
@@ -31,11 +31,11 @@ export default function Footer() {
                   <h4>Se Connecter</h4>
                 </Link>
               </Box>
-            </Grid>
-            <Grid item xs={12} sm={4}>
+            </Grid> */}
+            <Grid item xs={12} sm={8}>
               <Box>
                 <Link href="/a_propos">
-                  <h4>À Propos</h4>
+                  <h4>About</h4>
                   
                 </Link>
               </Box>
