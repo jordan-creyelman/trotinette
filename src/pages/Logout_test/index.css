@@ -1,0 +1,8 @@
+.btn-outline-light{
+    color: #8EC641 !important;    
+}
+
+.btn-outline-light:hover {
+    background-color: #11AF02 !important;
+    color: black !important;
+}
