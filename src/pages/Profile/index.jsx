@@ -1,22 +1,18 @@
 import React from "react";
-// import { useUserContext } from "../../UserContext";
 
+// import { useUserContext } from "../../UserContext";
 
 
 const Profile = () => {
 // const { user } = useUserContext()
 
   return (
-    // user && (
-      <div>
-        <h1>Profil</h1>
-        
-        {/* <p>{user.email}</p> */}
-        
-        
-      </div>
-    )
-  // );
+    // user && (     
+        /* <p>{user.email}</p> */
+     // )
+    <h1>francis</h1>
+     
+     )
 };
 
 export default Profile;

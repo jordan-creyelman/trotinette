@@ -138,7 +138,8 @@ function SignUp() {
               </Button>
               
             </Box>
-            <Typography
+            <div className="login">
+            <Typography 
               color="textSecondary"
               variant="body2"
             >
@@ -155,6 +156,7 @@ function SignUp() {
                 </Link>
               </Link>
             </Typography>
+            </div>
           </form>
         </Container>
       </Box>
