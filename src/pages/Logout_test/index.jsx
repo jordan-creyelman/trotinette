@@ -25,7 +25,7 @@ const Logout = () => {
 }
     return (
 
-        <button type="button" class="btn btn-outline-light" onClick={() => deco() } >Logout</button>
+        <button type="button" className="btn btn-outline-light" onClick={() => deco() } >Logout</button>
     );
 };
 
