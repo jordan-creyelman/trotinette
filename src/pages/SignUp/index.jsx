@@ -27,7 +27,7 @@ function SignUp() {
       body: raw
     };
 
-    fetch('http://localhost:3000/signup', requestOptions)
+    fetch('https://apitrottinet.herokuapp.com/signup', requestOptions)
       .then(response => {
         if (response.headers.get('Authorization'))
         {
