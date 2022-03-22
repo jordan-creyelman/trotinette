@@ -1,0 +1,37 @@
+.linkgithub{
+    display:flex !important;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+a{
+    color: #85bd39 !important;
+    text-decoration: none !important;
+}
+
+a:hover{
+    color: black !important;
+}
+
+.contact{
+    border: solid;
+    border-radius: 100px;
+    color:black !important;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+ul{
+    list-style-type: none !important;
+}
+
+.link{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
