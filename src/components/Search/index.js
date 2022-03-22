@@ -11,7 +11,7 @@ function SearchBar() {
   const [arrayPost, setArrayPost] = useState([]);
   const handleSearch =()=>{
 
-    fetch('http://localhost:3000/scooters', {
+    fetch('https://apitrottinet.herokuapp.com/scooters', {
      
       method: 'get',
       headers: {
