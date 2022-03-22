@@ -78,6 +78,13 @@ function SignUp() {
             />
             <TextField
               fullWidth
+              label="Nom"
+              margin="normal"
+              name="lastName"
+              variant="outlined"
+            />
+            <TextField
+              fullWidth
               label="Email"
               margin="normal"
               name="email"
