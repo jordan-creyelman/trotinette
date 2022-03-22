@@ -28,7 +28,7 @@ function SignIn() {
       body: raw
     };
 
-    fetch("http://localhost:3000/users/sign_in", requestOptions)
+    fetch("http://localhost:3000/login", requestOptions)
       .then(response => {
         if (response.headers.get('Authorization'))
         {
@@ -59,7 +59,7 @@ function SignIn() {
             startIcon={<ArrowBackIcon fontSize="small" />}
           ><Link className="linkaccueil" href="/">Accueil</Link>
           </Button>
-        <form>
+        <form onSubmit={submitInfo}>
           <Box sx={{ my: 1 }}>
             <Typography
               color="textPrimary"

@@ -16,6 +16,7 @@ function SignUp() {
 
     let raw = JSON.stringify({
       "user": {
+        "first_name": `${event.target.elements.first_name.value}`,
         "email": `${event.target.elements.email.value}`,
         "password": `${event.target.elements.password.value}`
       }
@@ -26,7 +27,7 @@ function SignUp() {
       body: raw
     };
 
-    fetch('http://localhost:3000/users', requestOptions)
+    fetch('http://localhost:3000/signup', requestOptions)
       .then(response => {
         if (response.headers.get('Authorization'))
         {
@@ -53,7 +54,7 @@ function SignUp() {
         }}
       >
         <Container maxWidth="sm">
-          <form>
+          <form onSubmit={submitInfo}>
             <Box sx={{ my: 3 }}>
               <Typography
                 color="textPrimary"
@@ -73,7 +74,7 @@ function SignUp() {
               fullWidth
               label="Prénom"
               margin="normal"
-              name="firstName"
+              name="first_name"
               variant="outlined"
             />
             <TextField
@@ -116,7 +117,7 @@ function SignUp() {
                 {' '}
                 <Link
                   href="https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt"
-                  passHref
+                  passhref="true"
                 >
                   <Link className="link_validation"
                     underline="always"
