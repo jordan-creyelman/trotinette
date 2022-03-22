@@ -3,6 +3,9 @@ import { useDispatch } from 'react-redux';
 import Cookies from 'js-cookie';
 import { logIn } from "../../redux/userActions";
 import { useNavigate } from "react-router-dom";
+import { Box, Button, Container, Link, TextField, Typography } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import './index.css';
 
 
 function SignIn() {
@@ -41,30 +44,74 @@ function SignIn() {
 
   return (
     <>
-      <div>
-        <h1>Se connecter</h1>
-        <div className="w-full max-w-xs">
-          <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={submitInfo}>
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                E-mail
-              </label>
-              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="E-mail"></input>
-            </div>
-            <div className="mb-6">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-                Mot de passe
-              </label>
-              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************"></input>
-            </div>
-            <button type="submit">
+    <Box
+      component="main"
+      sx={{
+        alignItems: 'center',
+        display: 'flex',
+        flexGrow: 1,
+        minHeight: '100%'
+      }}
+    >
+      <Container maxWidth="sm">
+          <Button className="btnaccueil"
+            component="a"
+            startIcon={<ArrowBackIcon fontSize="small" />}
+          ><Link className="linkaccueil" href="/">Accueil</Link>
+          </Button>
+        <form>
+          <Box sx={{ my: 1 }}>
+            <Typography
+              color="textPrimary"
+              variant="h4"
+            >
               Se connecter
-            </button>
-          </form>
-        </div>
-      </div>
-    </>
-  )
+            </Typography>
+          </Box> 
+          <TextField
+            fullWidth
+            label="Email"
+            margin="normal"
+            name="email"
+            type="email"
+            variant="outlined"
+          />
+          <TextField
+            fullWidth
+            label="Mot de Passe"
+            margin="normal"
+            name="password"
+            type="password"
+            variant="outlined"
+          />
+          <Box sx={{ py: 2 }}>
+            <Button className="btnlogin"
+              fullWidth
+              size="large"
+              type="submit"
+              variant="contained"
+            >
+              Se connecter
+            </Button>
+          </Box>
+          <div className="btnregister">
+              <Link className="linkinscription"
+                href="/inscription"
+                variant="subtitle2"
+                underline="hover"
+                text="decoration"
+                sx={{
+                  cursor: 'pointer'
+                }}
+              >
+                Inscription
+              </Link>
+             </div>         
+        </form>
+      </Container>
+    </Box>
+  </>
+  );
 }
 
 export default SignIn
