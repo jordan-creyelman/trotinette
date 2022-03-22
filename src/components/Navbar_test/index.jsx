@@ -69,7 +69,7 @@ const Navbar = () => {
               <div className="left"></div>
               <div className="right"></div>
             </div> 
-            <li className="nav-item active" >
+            <li className="nav-item" >
               <NavLink className="nav-link" to="/" >
                 <i className="fas fa-home"></i>
                 Home
