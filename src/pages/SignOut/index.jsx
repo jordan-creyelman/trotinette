@@ -14,6 +14,16 @@ function SignOut() {
     setUser(null)
     navigate("/");
   };
+  
+
+  let requestOptions = {
+    method: 'DELETE',    
+    
+    };
+
+    fetch('http://localhost:3005/users/sign_out', requestOptions)
+    .catch(error => console.log('error', error));
+        
 
   return (
     <div className='sign_out' >

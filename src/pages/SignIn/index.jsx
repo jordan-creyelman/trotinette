@@ -1,67 +1,117 @@
-import React from "react";
-import { useState } from "react";
+import React from "react"
+import { useDispatch } from 'react-redux';
+import Cookies from 'js-cookie';
+import { logIn } from "../../redux/userActions";
 import { useNavigate } from "react-router-dom";
-import { useUserContext } from "../../UserContext";
-import Cookies from "js-cookie";
-import "./index.css";
+import { Box, Button, Container, Link, TextField, Typography } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import './index.css';
+
 
 function SignIn() {
-  const { setUser } = useUserContext();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const submitInfo = (event) => {
+    event.preventDefault();
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePassword = (e) => {
-    setPassword(e.target.value);
-  };
-
-  let navigate = useNavigate();
-
-  const handleSubmit = () => {
-    const data = {
-      user: {
-        email: email,
-        password: password,
-      },
-    };
-
-    fetch("http://localhost:3000/users/sign_in", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.ok) {
-        const token = res.headers.get("Authorization");
-        Cookies.set("token", token, { expires: 7 });
-        setUser(Cookies.get("token"));
-        navigate(`/`);
-        return res.json();
-      } else {
-        throw new Error(res);
+    let raw = JSON.stringify({
+      "user": {
+        "email": `${event.target.elements.email.value}`,
+        "password": `${event.target.elements.password.value}`
       }
     });
-  };
+    let requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw
+    };
+
+    fetch("https://apitrottinet.herokuapp.com/login", requestOptions)
+      .then(response => {
+        if (response.headers.get('Authorization'))
+        {
+          Cookies.set('token', response.headers.get('Authorization'), { sameSite: 'lax' });
+          Cookies.set('isLoggedIn', true, { sameSite: 'lax' });
+          dispatch(logIn(Cookies.get('token')));
+          navigate('/')
+        }
+        else (alert('Something went wrong'))
+      })
+      .catch(error => console.log('error', error));
+  }
 
   return (
-<div className="sign_in" >
-        <form>
-            <h1>Connexion</h1>
-            <label htmlFor="email">Identifiant </label>
-            <input id="email" type="text" onChange={handleEmail} />
-
-            <label htmlFor="password">Mot de passe </label>
-            <input id="password" type="text" onChange={handlePassword} />
-
-            <button onClick={() => handleSubmit()} type={"button"} text={"Connexion"}>Valider</button>
+    <>
+    <Box
+      component="main"
+      sx={{
+        alignItems: 'center',
+        display: 'flex',
+        flexGrow: 1,
+        minHeight: '100%'
+      }}
+    >
+      <Container maxWidth="sm">
+          <Button className="btnaccueil"
+            component="a"
+            startIcon={<ArrowBackIcon fontSize="small" />}
+          ><Link className="linkaccueil" href="/">Accueil</Link>
+          </Button>
+        <form onSubmit={submitInfo}>
+          <Box sx={{ my: 1 }}>
+            <Typography
+              color="textPrimary"
+              variant="h4"
+            >
+              Se connecter
+            </Typography>
+          </Box> 
+          <TextField
+            fullWidth
+            label="Email"
+            margin="normal"
+            name="email"
+            type="email"
+            variant="outlined"
+          />
+          <TextField
+            fullWidth
+            label="Mot de Passe"
+            margin="normal"
+            name="password"
+            type="password"
+            variant="outlined"
+          />
+          <Box sx={{ py: 2 }}>
+            <Button className="btnlogin"
+              fullWidth
+              size="large"
+              type="submit"
+              variant="contained"
+            >
+              Se connecter
+            </Button>
+          </Box>
+          <div className="btnregister">
+              <Link className="linkinscription"
+                href="/inscription"
+                variant="subtitle2"
+                underline="hover"
+                text="decoration"
+                sx={{
+                  cursor: 'pointer'
+                }}
+              >
+                Inscription
+              </Link>
+             </div>         
         </form>
-    </div>
-  )
+      </Container>
+    </Box>
+  </>
+  );
 }
 
-export default SignIn;
+export default SignIn

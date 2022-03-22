@@ -1,130 +1,169 @@
-import React from 'react';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useUserContext } from '../../UserContext';
+import React from "react"
+import { useDispatch } from 'react-redux';
 import Cookies from 'js-cookie';
-import jwt_decode from "jwt-decode";
-import "./index.css"
+import { logIn } from '../../redux/userActions';
+import { useNavigate } from "react-router-dom";
+import { Box, Button, Checkbox, Container, Link, TextField, Typography} from '@mui/material';
+import "./index.css";
 
-const SignUp = () => {
+function SignUp() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const submitInfo = (event) => {
+    event.preventDefault();
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
-    let navigate = useNavigate();
-  
-    const { setUser } = useUserContext();
-  
-    
-    
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-  
-    
-    const [submitted, setSubmitted] = useState(false);
-    const [error, setError] = useState(false);
-        
-    
-    const handleEmail = (e) => {
-      setEmail(e.target.value);
-      setSubmitted(false);
-    };
-  
-    
-    const handlePassword = (e) => {
-      setPassword(e.target.value);
-      setSubmitted(false);
-    };
-  
-    const fetchRegisterForm = (data) => {
-      
-      fetch("https://apitrottinet.herokuapp.com/users", {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((res) => {
-          if (res.ok) {
-          const token = res.headers.get("Authorization");
-          Cookies.set("token", token, { expires: 7 });
-          navigate(`/`);      
-          return res.json();
-          } else {
-            throw new Error(res);
-          }
-        })
-        .then((json) => console.dir(json))
-        .catch((err) => console.error(err));
-  
-    };
-  
-      
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      if (email === "" || password === "") {
-        setError(true);
-      } else {
-        const data = {
-          user: {
-            email: email,
-            password: password,
-          },
-        }
-        setSubmitted(true);
-        setError(false);
-        fetchRegisterForm(data);
-        setUser(jwt_decode(Cookies.get("token")))
+    let raw = JSON.stringify({
+      "user": {
+        "first_name": `${event.target.elements.first_name.value}`,
+        "email": `${event.target.elements.email.value}`,
+        "password": `${event.target.elements.password.value}`
       }
+    });
+    let requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw
     };
-  
-    
-    const successMessage = () => {
-      return (
-        <div
-          className="success"
-          style={{
-            display: submitted ? "" : "none",
-          }}
-        >
-          <h1>Bienvenue !</h1>
-        </div>
-      );
-    };
-  
-    
-    const errorMessage = () => {
-      return (
-        <div
-          className="error"
-          style={{
-            display: error ? "" : "none",
-          }}
-        >
-          <h1>Veuillez renseigner tous les champs</h1>
-        </div>
-      );
-    };
-  
-    return (
-      <div className="sign_up">
-        <form mode="vertical" onSubmit={handleSubmit}>
-          <h1>Inscription</h1>
-          <div className="messages">
-            {errorMessage()}
-            {successMessage()}
-          </div>
-            
-          <label>Email</label>
-  
-          <input onChange={handleEmail} className="input" value={email} type="email" />
-  
-          <label>Password</label>
-  
-          <input onChange={handlePassword} className="input" value={password} type="text" />
-  
-          <button type={"submit"} text={"Inscription"}>Valider</button>
-        </form>
+
+    fetch('https://apitrottinet.herokuapp.com/signup', requestOptions)
+      .then(response => {
+        if (response.headers.get('Authorization'))
+        {
+          Cookies.set('token', response.headers.get('Authorization'), { sameSite: 'lax' });
+          Cookies.set('isLoggedIn', true, { sameSite: 'lax' });
+          dispatch(logIn(Cookies.get('token')));
+          navigate('/')
+        }
+        else (alert('Something went wrong'))
+      })
+      .catch(error => console.log('error', error));
+  }
+
+  return (
+    <>
+    <div className='Register'>
+      <Box
+        component="main"
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+          flexGrow: 1,
+          minHeight: '100%'
+        }}
+      >
+        <Container maxWidth="sm">
+          <form onSubmit={submitInfo}>
+            <Box sx={{ my: 3 }}>
+              <Typography
+                color="textPrimary"
+                variant="h4"
+              >
+                Créer un nouveau compte
+              </Typography>
+              <Typography
+                color="textSecondary"
+                gutterBottom
+                variant="body2"
+              >
+                Utilisez votre email pour créer un nouveau compte
+              </Typography>
+            </Box>
+            <TextField
+              fullWidth
+              label="Prénom"
+              margin="normal"
+              name="first_name"
+              variant="outlined"
+            />
+            <TextField
+              fullWidth
+              label="Nom"
+              margin="normal"
+              name="lastName"
+              variant="outlined"
+            />
+            <TextField
+              fullWidth
+              label="Email"
+              margin="normal"
+              name="email"
+              type="email"
+              variant="outlined"
+            />
+            <TextField
+              fullWidth
+              label="Mot de Passe"
+              margin="normal"
+              name="password"
+              type="password"
+              variant="outlined"
+            />
+            <Box
+              sx={{
+                alignItems: 'center',
+                display: 'flex',
+                ml: -1
+              }}
+            >
+              <Checkbox className="checkbox"
+                name="policy"
+              />
+              <Typography
+                variant="body2"
+              >
+                J'ai lu les
+                {' '}
+                <Link
+                  href="https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt"
+                  passhref="true"
+                >
+                  <Link className="link_validation"
+                    underline="always"
+                    variant="subtitle2"
+                  >    
+                  Termes et conditions
+                  </Link>
+                </Link>
+              </Typography>
+            </Box>
+            <Box sx={{ py: 2 }}>
+              <Button className="btn-register"
+                fullWidth
+                size="large"
+                type="submit"
+                variant="contained"
+              >
+                Inscription
+              </Button>
+              
+            </Box>
+            <div className="login">
+            <Typography 
+              color="textSecondary"
+              variant="body2"
+            >
+              Avez-vous un compte ?
+              {' '}
+              <Link
+                href="/connexion"
+              >
+                <Link className="linksignup"
+                  variant="subtitle2"
+                  underline="hover"
+                >
+                  Se connecter
+                </Link>
+              </Link>
+            </Typography>
+            </div>
+          </form>
+        </Container>
+      </Box>
       </div>
-    );
-  };
-  
-  export default SignUp;
+    </>
+  )
+}
+
+export default SignUp

@@ -1,35 +1,28 @@
 .Footer{
-    background: rgb(54, 119, 0);
-    background: linear-gradient(
-    90deg,
-    #367700 0%,
-    rgba(26, 177, 0, 1) 4%,
-    rgba(50, 179, 3, 1) 44%,
-    rgba(50, 179, 3, 1) 48%,
-    rgba(26, 177, 0, 1) 96%,
-    rgba(15, 142, 0, 1) 100%
-  );
+    background-color: #000000 !important;
     
-  position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
-
-    
+  position: absolute;
+  bottom: 0; 
+  width: 100%;
+  text-align: center;
 }
-    /* position:relative;
-        left:0;
-        bottom:0;
-        right:0;
-    padding-bottom: 0px; */
 
+.contents {
+    flex: 1 0 auto;
+    }
 
 .MuiBox-root{
-    padding-top: 0px !important;  
+    padding: 15px !important; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h4{
-    /* padding-top: 10px !important; */
-    color: black !important;
+    color: #8EC641 !important;
+    margin-top: 10px;
 }
 
+.about {
+    margin-bottom: 250px;
+}

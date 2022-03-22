@@ -1,5 +1,6 @@
 import React from 'react'
-import CardArticle from '../../components/CardArticle';
+import Banner from '../../components/Banner';
+//import CardArticle from '../../components/CardArticle';
 import Search from '../../components/Search'
 
 // import { useEffect } from 'react';
@@ -30,13 +31,14 @@ function Home() {
 
   return (
 
-    <>
+    <><Banner />
         <div className='home' >
             <Search />            
         </div>
-        <div >            
+        
+        {/* <div >            
             <CardArticle />
-        </div>
+        </div> */}
     </>
   );
 
