@@ -4,12 +4,12 @@
     margin-bottom: 100px;
 }
 
-a{
+.contactlink{
     color: #85bd39 !important;
     text-decoration: none !important;
 }
 
-a:hover{
+.contactlink:hover{
     color: black !important;
 }
 
