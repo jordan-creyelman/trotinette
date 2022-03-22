@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
+import { MdSearch } from 'react-icons/md';
 import Price from "./Price.js";
 import "./index.css";
 import Img from '../../assets/Img/test.png';
@@ -11,7 +12,7 @@ function SearchBar() {
   const [arrayPost, setArrayPost] = useState([]);
   const handleSearch =()=>{
 
-    fetch('http://localhost:3000/scooters', {
+    fetch('https://apitrottinet.herokuapp.com/scooters', {
      
       method: 'get',
       headers: {
@@ -35,13 +36,14 @@ function SearchBar() {
   return (
     <div>
       <>
-          <div className="searchBar">
+          <div className="search ">   
               <input type="text" onChange={e => setPrice(e.target.value) } value={price} placeholder="Recherche par Prix"/><br />
-              <button type="button" onClick={() => handleSearch() }>Enregistrer</button>
+              <button type="button" onClick={() => handleSearch() }><MdSearch className = 'search-icons'size = '1.3em' /></button>
           </div>
+
           <div className="search__results">
               
-            <div className="search__result">Résultats</div>
+            <div className="search__result"></div>
             <Row xs={1} md={4} className="g-4 row">
               {arrayPost.map(post=>
                 <Col>

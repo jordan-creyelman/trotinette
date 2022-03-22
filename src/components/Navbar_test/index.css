@@ -119,10 +119,10 @@ i {
   height: 50px;
   border-radius: 80%;
   background-color: #000000;
-  -webkit-border-radius: 80%;
+  /* -webkit-border-radius: 80%;
   -moz-border-radius: 80%;
   -ms-border-radius: 80%;
-  -o-border-radius: 80%;
+  -o-border-radius: 80%; */
 }
 
 .hori-selector .right:before {
