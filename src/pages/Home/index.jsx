@@ -30,16 +30,23 @@ function Home() {
   // }, []);
 
   return (
-
-    <><Banner />
-        <div className='home' >
-            <Search />            
-        </div>
+    
+    <div>
+      <Banner />
+      <div>
+        <Search />
+      </div>
+    </div>
+    // <>
+    // <Banner />
+    //     <div className='home' >
+    //         <Search />            
+    //     </div>
         
-        {/* <div >            
-            <CardArticle />
-        </div> */}
-    </>
+    //     <div >            
+    //         <CardArticle />
+    //     </div>
+    // </>
   );
 
 }
