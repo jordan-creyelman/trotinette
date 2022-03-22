@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import Cookies from 'js-cookie';
 import { logIn } from '../../redux/userActions';
 import { useNavigate } from "react-router-dom";
+import { Box, Button, Checkbox, Container, Link, TextField, Typography} from '@mui/material';
+import "./index.css";
 
 function SignUp() {
   const dispatch = useDispatch();
@@ -40,27 +42,115 @@ function SignUp() {
 
   return (
     <>
-      <div className="container">
-        <div className="title">S'inscrire</div>
-        <div className="w-full max-w-xs">
-          <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={submitInfo}>
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                E-mail
-              </label>
-              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text" placeholder="E-mail"></input>
-            </div>
-            <div className="mb-6">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-                Mot de passe
-              </label>
-              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************"></input>
-            </div>
-            <button className="buttonPink" type="submit">
-              S'inscrire
-            </button>
+    <div className='Register'>
+      <Box
+        component="main"
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+          flexGrow: 1,
+          minHeight: '100%'
+        }}
+      >
+        <Container maxWidth="sm">
+          <form>
+            <Box sx={{ my: 3 }}>
+              <Typography
+                color="textPrimary"
+                variant="h4"
+              >
+                Créer un nouveau compte
+              </Typography>
+              <Typography
+                color="textSecondary"
+                gutterBottom
+                variant="body2"
+              >
+                Utilisez votre email pour créer un nouveau compte
+              </Typography>
+            </Box>
+            <TextField
+              fullWidth
+              label="Prénom"
+              margin="normal"
+              name="firstName"
+              variant="outlined"
+            />
+            <TextField
+              fullWidth
+              label="Email"
+              margin="normal"
+              name="email"
+              type="email"
+              variant="outlined"
+            />
+            <TextField
+              fullWidth
+              label="Mot de Passe"
+              margin="normal"
+              name="password"
+              type="password"
+              variant="outlined"
+            />
+            <Box
+              sx={{
+                alignItems: 'center',
+                display: 'flex',
+                ml: -1
+              }}
+            >
+              <Checkbox className="checkbox"
+                name="policy"
+              />
+              <Typography
+                variant="body2"
+              >
+                J'ai lu les
+                {' '}
+                <Link
+                  href="https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt"
+                  passHref
+                >
+                  <Link className="link_validation"
+                    underline="always"
+                    variant="subtitle2"
+                  >    
+                  Termes et conditions
+                  </Link>
+                </Link>
+              </Typography>
+            </Box>
+            <Box sx={{ py: 2 }}>
+              <Button className="btn-register"
+                fullWidth
+                size="large"
+                type="submit"
+                variant="contained"
+              >
+                Inscription
+              </Button>
+              
+            </Box>
+            <Typography
+              color="textSecondary"
+              variant="body2"
+            >
+              Avez-vous un compte ?
+              {' '}
+              <Link
+                href="/connexion"
+              >
+                <Link className="linksignup"
+                  variant="subtitle2"
+                  underline="hover"
+                >
+                  Se connecter
+                </Link>
+              </Link>
+            </Typography>
           </form>
-        </div>
+        </Container>
+      </Box>
       </div>
     </>
   )
