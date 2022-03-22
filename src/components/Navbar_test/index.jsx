@@ -76,13 +76,13 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/signup" >
+              <NavLink className="nav-link" to="/inscription" >
                 <i className="fas fa-user-plus"></i>    
                 Signup
               </NavLink> 
               </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/login" >
+              <NavLink className="nav-link" to="/connexion" >
                 <i className="fas fa-sign-in-alt"></i>   
                 Login
               </NavLink>
