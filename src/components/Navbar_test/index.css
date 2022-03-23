@@ -169,7 +169,7 @@ i {
   }
 }
 
-img{
+.img-fluid{
   width: 33px;
   border-radius: 30px;
 }

@@ -33,7 +33,7 @@ function App() {
               <Route path="/deconnexion" element={<SignOut />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/articles" element={<Articles />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/Trott'eam" element={<Contact />} />
               <Route path="/a_propos" element={<About />} />
               <Route path="*" element={<Home />} />
             </Routes>
