@@ -7,4 +7,5 @@ html,
 
 body {
   background: #CBE9D8!important;
+  flex: 1 0 auto;
 }

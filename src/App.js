@@ -11,17 +11,15 @@ import Profile from './pages/Profile';
 import Footer from './components/Footer/index';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import Navbar from './components/Navbar/index';
+import Navbar from './components/Navbar_test/index';
 
 
 function App() {
   
   return (
     <div className="App">
-      
       <Provider store={store}> 
         <Router>
-          {/* <TrotiBar /> */}
           <Navbar/>
             <Routes>
               <Route path="/" element={<Home />} /> 

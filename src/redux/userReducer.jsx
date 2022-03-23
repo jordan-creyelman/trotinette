@@ -1,7 +1,6 @@
 import { LOGIN, LOGOUT } from "./userTypes";
 import Cookies from 'js-cookie';
 
-
 const initialState = {
     token: Cookies.get('token') || null,
     id: Cookies.get('id') || null,
