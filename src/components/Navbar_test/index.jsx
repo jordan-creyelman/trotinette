@@ -99,9 +99,9 @@ const Navbar = () => {
               </NavLink>
             </li> */}
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact" >
+              <NavLink className="nav-link" to="/Trott'eam" >
                 <i  className="far fa-address-book"></i>
-                Contact 
+                Trott'eam 
               </NavLink>
             </li>
           </ul>
@@ -157,9 +157,9 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact" >
+              <NavLink className="nav-link" to="/Trott'eam" >
                 <i  className="far fa-address-book"></i>
-                Contact 
+                Trott'eam 
               </NavLink>
             </li>
           </ul>

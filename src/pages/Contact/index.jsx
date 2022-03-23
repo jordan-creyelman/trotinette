@@ -6,7 +6,7 @@ import img3 from '../../assets/Img/contact.png';
 export default function Contact() {
   return (
     <div className='contact'>
-      <h1>Trott'eam</h1>
+      <h1 className='titlecontact'>Trott'eam</h1>
 
       <Container className='linkgithub'>
         <div className='link'>
@@ -16,7 +16,7 @@ export default function Contact() {
         <a className='contactlink' href="https://github.com/Nicoclos">Nicolas Bia</a>
         <a className='contactlink' href="https://github.com/JulienRouet">Julien ROUET</a>
         </div>
-        <img style={{height: 400, width: 800, borderRadius: 0,}}src={img3} alt="Banner" className='img-fluid'></img>
+        <img style={{height: 400, width: 800, borderRadius: 0,}}src={img3} alt="Banner" className='img-contact'></img>
       </Container>
     </div>
     
