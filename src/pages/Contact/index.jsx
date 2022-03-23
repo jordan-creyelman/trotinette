@@ -16,7 +16,7 @@ export default function Contact() {
         <a className='contactlink' href="https://github.com/Nicoclos">Nicolas Bia</a>
         <a className='contactlink' href="https://github.com/JulienRouet">Julien ROUET</a>
         </div>
-        <img style={{height: 400, width: 800, borderRadius: 0,}}src={img3} alt="Banner" className='img-contact'></img>
+        <img style={{height: 400, width: 800, borderRadius: 0,}}src={img3} alt="Banner" class='img-fluid'></img>
       </Container>
     </div>
     
