@@ -1,16 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useUserContext } from "../../UserContext";
 import Cookies from "js-cookie";
 import "./index.css";
 
 function SignOut() {
   let navigate = useNavigate();
-  const { setUser } = useUserContext();
 
   const handleSubmit = () => {
     Cookies.remove("token");
-    setUser(null);
     navigate("/");
   };
 

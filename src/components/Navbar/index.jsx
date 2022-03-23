@@ -142,6 +142,19 @@ const Navbar = () => {
                   Accueil
                 </NavLink>
               </li>
+             
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/profile">
+                  <i className="fas fa-user"> </i>
+                  Profil
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Trott'eam">
+                  <i className="far fa-address-book"></i>
+                  Trott'eam
+                </NavLink>
+              </li>
               <li className="nav-item">
                 <NavLink
                   className="nav-link"
@@ -155,18 +168,6 @@ const Navbar = () => {
                 >
                   <i className="fas fa-sign-out-alt"></i>
                   Déconnexion
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/profile">
-                  <i className="fas fa-user"> </i>
-                  Profil
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/Trott'eam">
-                  <i className="far fa-address-book"></i>
-                  Trott'eam
                 </NavLink>
               </li>
             </ul>

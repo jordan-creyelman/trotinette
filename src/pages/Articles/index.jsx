@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, Col } from "react-bootstrap";
-import Img from "../../assets/Img/test.png";
+import { Card, Col  } from "react-bootstrap";
+import Img5 from "../../assets/Img/test.png";
 import "./index.css";
 
 export default function Articles() {
@@ -10,14 +10,14 @@ export default function Articles() {
       <div className="Container1">
         <div className="img1">
           <Col>
-            <img src={Img} style={{ width: "180%" }} alt="imgtrotti"></img>
+            <img src={Img5} style={{ width: "180%" }} alt="imgtrotti"></img>
           </Col>
         </div>
         <div className="cardbodytitle1">
           <Col>
             <div className="cardbodytitle">
               <Card.Body>
-                <h1 style={{ color: "#78a638" }}>Trottinette V.12</h1>
+                <h1 style={{ color: "#78a638"}} >Trottinette V.12</h1>
               </Card.Body>
             </div>
             <div className="cardbodydescription">
@@ -57,28 +57,25 @@ export default function Articles() {
         </Col>
         <div className="img2">
           <Col>
-            <img src={Img} style={{ width: "50%" }} alt="Logo Trotti'NET"></img>
+            <img src={Img5} style={{ width: "50%" }} alt="Logo Trotti'NET"></img>
           </Col>
         </div>
       </div>
       <div className="resume">
-        <Card.Body>
-          <h5>
-            La trottinette ou patinette est un engin de déplacement personnel
-            (EDP) composé d'une planche portée par deux ou trois roues et d'un
-            guidon. Il permet de se déplacer, un pied posé sur la planche,
-            l'autre étant utilisé pour se propulser par poussée au sol.
-          </h5>
+      <Card.Body>
+                <h5>
+                La trottinette ou patinette est un engin de déplacement personnel (EDP) composé d'une planche portée par deux ou trois roues et d'un guidon. Il permet de se déplacer, un pied posé sur la planche, l'autre étant utilisé pour se propulser par poussée au sol.
+                </h5>
         </Card.Body>
-      </div>
+        </div>
     </container>
 
-    // <Container>
-    //   <Row>
-    //     <Col>1 of 2</Col>
-    //     <h1>francis</h1>
-    //     <Col>2 of 2</Col>
-    //   </Row>
-    // </Container>
+      // <Container>
+      //   <Row>
+      //     <Col>1 of 2</Col>
+      //     <h1>francis</h1>
+      //     <Col>2 of 2</Col>
+      //   </Row>
+      // </Container>
   );
 }
