@@ -10,11 +10,12 @@
 }
 
 .contactlink:hover{
-    color: black !important;
+    color: #CBE9D8 !important;
 }
 
 .contact{
     border-style: groove;
+    border-color: #85bd39;
     border-width: 30px;
     border-radius: 10px;
     color:black !important;
@@ -26,6 +27,7 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    background-color: #000000;
 }
 
 ul{
