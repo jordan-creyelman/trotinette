@@ -11,7 +11,7 @@ import Profile from './pages/Profile';
 import Footer from './components/Footer/index';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import Navbar from './components/Navbar_test/index';
+import Navbar from './components/Navbar/index';
 
 
 function App() {
