@@ -3,7 +3,6 @@ import { Button, Card, Col, Row } from "react-bootstrap";
 import { MdSearch } from "react-icons/md";
 import Price from "./Price.js";
 import "./index.css";
-import Img from "../../assets/Img/test.png";
 
 function SearchBar() {
   const [price, setPrice] = useState("");
@@ -54,7 +53,7 @@ function SearchBar() {
                     <Card.Body>
                       <Card.Img
                         variant="top"
-                        src={Img}
+                        src={post.image}
                         alt=""
                         className="card_img"
                       />
