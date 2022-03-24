@@ -70,7 +70,7 @@ function SignIn() {
             </Box>
             <TextField
               fullWidth
-              label="Email"
+              label="Email 📫"
               margin="normal"
               name="email"
               type="email"
@@ -78,7 +78,7 @@ function SignIn() {
             />
             <TextField
               fullWidth
-              label="Mot de Passe"
+              label="Mot de Passe 🔒"
               margin="normal"
               name="password"
               type="password"
