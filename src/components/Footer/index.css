@@ -1,4 +1,4 @@
-.Footer{
+/* .Footer{
     background-color: #000000 !important;
     
   position: absolute;
@@ -25,4 +25,22 @@ h4{
 
 .about {
     margin-bottom: 250px;
+} */
+
+
+.main-footer{
+    color: #85bd39;
+    background-color: #000000;
+    padding-top: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
+.fab  {
+    color:#85bd39 ;
+}
+.fa-brands{
+    color:#85bd39 ;
+}
+

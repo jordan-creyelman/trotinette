@@ -1,11 +1,22 @@
-body, 
+/* body, 
 html,
 .app {
   position: relative;
+  min-height: 100vh;
   height: 100vh;
-}
+} */
 
 body {
   background: #CBE9D8!important;
   flex: 1 0 auto;
+}
+
+.page-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap{
+  flex: 1;
 }
