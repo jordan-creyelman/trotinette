@@ -31,14 +31,14 @@ const Profile = () => {
           </Box>
           <TextField
             fullWidth
-            label="Prénom"
+            label="Pseudonyme trop cool 🤠"
             margin="normal"
-            name="firstName"
+            name="username"
             variant="outlined"
           />
           <TextField
             fullWidth
-            label="Email"
+            label="Email 📫"
             margin="normal"
             name="email"
             type="email"
@@ -46,7 +46,7 @@ const Profile = () => {
           />
           <TextField
             fullWidth
-            label="Mot de Passe"
+            label="Mot de Passe 🔒"
             margin="normal"
             name="password"
             type="password"

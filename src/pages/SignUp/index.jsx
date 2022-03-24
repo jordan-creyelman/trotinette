@@ -16,7 +16,7 @@ function SignUp() {
 
     let raw = JSON.stringify({
       user: {
-        first_name: `${event.target.elements.first_name.value}`,
+        username: `${event.target.elements.username.value}`,
         email: `${event.target.elements.email.value}`,
         password: `${event.target.elements.password.value}`,
       },
@@ -65,21 +65,14 @@ function SignUp() {
               </Box>
               <TextField
                 fullWidth
-                label="Prénom"
+                label="Pseudonyme trop cool 🤠"
                 margin="normal"
-                name="first_name"
+                name="username"
                 variant="outlined"
               />
               <TextField
                 fullWidth
-                label="Nom"
-                margin="normal"
-                name="lastName"
-                variant="outlined"
-              />
-              <TextField
-                fullWidth
-                label="Email"
+                label="Email 📫"
                 margin="normal"
                 name="email"
                 type="email"
@@ -87,7 +80,7 @@ function SignUp() {
               />
               <TextField
                 fullWidth
-                label="Mot de Passe"
+                label="Mot de Passe 🔒"
                 margin="normal"
                 name="password"
                 type="password"
