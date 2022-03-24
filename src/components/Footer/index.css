@@ -1,10 +1,8 @@
-.Footer{
+footer{
     background-color: #000000 !important;
-    
-  position: absolute;
-  bottom: 0; 
-  width: 100%;
-  text-align: center;
+    bottom: 0; 
+    width: 100%;
+    text-align: center;
 }
 
 .contents {

@@ -4,7 +4,7 @@ import "./index.css";
 
 export default function Footer() {
   return (
-      <div className='Footer'>
+      <footer>
       <Box
         px={{ xs: 3, sm: 10 }}
         py={{ xs: 5, sm: 10 }}
@@ -15,6 +15,6 @@ export default function Footer() {
           </Box>
         </Container>
       </Box>
-      </div>
+      </footer>
   );
 }

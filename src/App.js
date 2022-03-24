@@ -8,11 +8,10 @@ import SignUp from './pages/SignUp/index';
 import Contact from './pages/Contact';
 import Articles from './pages/Articles';
 import Profile from './pages/Profile';
-import Footer from './components/Footer/index';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import Navbar from './components/Navbar/index';
-
+import Footer from './components/Footer/index';
 
 function App() {
   
