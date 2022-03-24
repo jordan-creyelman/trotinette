@@ -1,14 +1,17 @@
 /* body, 
 html,
 .app {
-  position: relative;
   min-height: 100vh;
   height: 100vh;
 } */
 
-body {
+body{
   background: #CBE9D8!important;
-  flex: 1 0 auto;
+  min-height: 100vh;
+}
+
+.contents {
+  flex: 1;
 }
 
 .page-container{
