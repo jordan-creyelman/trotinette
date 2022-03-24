@@ -40,7 +40,7 @@ function SignUp() {
           Cookies.set("isLoggedIn", true, { sameSite: "lax" });
           dispatch(logIn(Cookies.get("token")));
           navigate("/");
-        } else alert("Something went wrong");
+        } else alert("Quelque chose s'est mal passé");
       })
       .catch((error) => console.log("error", error));
   };
