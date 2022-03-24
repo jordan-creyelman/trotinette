@@ -2,6 +2,8 @@
 // import Box from '@material-ui/core/Box';
 import React from "react";
 import "./index.css";
+import { FaGithub, FaFacebook } from "react-icons/fa";
+
 
 export default function Footer() {
   return (
@@ -36,7 +38,7 @@ export default function Footer() {
           <div className="row">
             <div className="col">
                <a target="_blank" rel="noreferrer" href="https://www.facebook.com">
-                 <h4><i className='fab fa-facebook-f'></i></h4> 
+                 <h4><FaFacebook className="icon-footer"/></h4> 
               </a>
             </div>
             <div className="col">
@@ -44,7 +46,7 @@ export default function Footer() {
             </div>
             <div className="col">
               <a target="_blank" rel="noreferrer" href="https://github.com/jordan-creyelman/trotinette">
-                <h4><i class="fa-brands fa-github"></i></h4>
+                <h4><FaGithub className="icon-footer"/></h4>
               </a>
             </div>  
           </div>
