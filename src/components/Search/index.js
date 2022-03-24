@@ -26,6 +26,13 @@ function SearchBar() {
     // // console.log(arrayPost)
     // console.log(arrayPost[0].price)
   };
+  
+  const enterKey = (d) => {
+    if (d.keyCode == 13) {
+      handleSearch()
+    }
+  
+  }
 
   return (
     <div>
@@ -36,6 +43,7 @@ function SearchBar() {
             onChange={(e) => setPrice(e.target.value)}
             value={price}
             placeholder="Recherche par Prix"
+            onKeyDown={(enterKey)}
           />
           <br />
           <button type="button" onClick={() => handleSearch()}>
