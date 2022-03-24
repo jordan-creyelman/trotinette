@@ -1,10 +1,14 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import Cookies from "js-cookie";
-import { logIn } from "../../redux/userActions";
+import React, {useEffect} from 'react';
+import { useDispatch } from 'react-redux';
+import $ from 'jquery';
+import Cookies from 'js-cookie';
+import { logIn } from '../../redux/userActions';
 import { useNavigate } from "react-router-dom";
-import { Box, Button, Checkbox, Container, Link, TextField, Typography } from "@mui/material";
+import { Box, Button, Checkbox, Container, Link, TextField, Typography} from '@mui/material';
 import "./index.css";
+import { Link as RouterLink } from 'react-router-dom';
+import {animation} from "../../utils/animation";
+
 
 function SignUp() {
   const dispatch = useDispatch();
@@ -16,7 +20,7 @@ function SignUp() {
 
     let raw = JSON.stringify({
       user: {
-        first_name: `${event.target.elements.first_name.value}`,
+        username: `${event.target.elements.username.value}`,
         email: `${event.target.elements.email.value}`,
         password: `${event.target.elements.password.value}`,
       },
@@ -40,6 +44,13 @@ function SignUp() {
       })
       .catch((error) => console.log("error", error));
   };
+
+  useEffect(() => {
+    animation();
+    $(window).on('resize', function(){
+      setTimeout(function(){ animation(); }, 500);
+    });
+  }, []);
 
   return (
     <>
@@ -65,21 +76,14 @@ function SignUp() {
               </Box>
               <TextField
                 fullWidth
-                label="Prénom"
+                label="Pseudonyme trop cool 🤠"
                 margin="normal"
-                name="first_name"
+                name="username"
                 variant="outlined"
               />
               <TextField
                 fullWidth
-                label="Nom"
-                margin="normal"
-                name="lastName"
-                variant="outlined"
-              />
-              <TextField
-                fullWidth
-                label="Email"
+                label="Email 📫"
                 margin="normal"
                 name="email"
                 type="email"
@@ -87,7 +91,7 @@ function SignUp() {
               />
               <TextField
                 fullWidth
-                label="Mot de Passe"
+                label="Mot de Passe 🔒"
                 margin="normal"
                 name="password"
                 type="password"
@@ -131,7 +135,9 @@ function SignUp() {
               <div className="login">
                 <Typography color="textSecondary" variant="body2">
                   Avez-vous un compte ?{" "}
-                  <Link href="/connexion">
+                  <Link component={RouterLink} to="/connexion" onClick={ function(){
+                  setTimeout(function(){ animation(); });
+                }} id="navbarSupportedContent">
                     <Link
                       className="linksignup"
                       variant="subtitle2"

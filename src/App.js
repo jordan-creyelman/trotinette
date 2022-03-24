@@ -16,7 +16,8 @@ import Footer from './components/Footer/index';
 function App() {
   
   return (
-    <div className="App">
+    <div className="page-container">
+      <div className='content-wrap'>
       <Provider store={store}> 
         <Router>
           <Navbar/>
@@ -29,10 +30,11 @@ function App() {
               <Route path="/articles" element={<Articles />} />
               <Route path="/Trott'eam" element={<Contact />} />
               <Route path="*" element={<Home />} />
-            </Routes>
-          <Footer />
+            </Routes>  
         </Router>
       </Provider>
+      </div>
+      <Footer />
     </div>
   );
 }

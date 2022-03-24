@@ -1,25 +1,3 @@
-.btnaccueil{
-    color: #000000 !important;
-}
-
-.linkaccueil{
-    color: #000000 !important;
-}
-
-.btnlogin{
-    color: #000000 !important;
-    background-color: #85bd39 !important;
-}
-
-.linkinscription{
-    color: #000000 !important;
-    text-decoration: underline !important;
-}
-
-.btnregister{
-    margin-bottom: 80px;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {

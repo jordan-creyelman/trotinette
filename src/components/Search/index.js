@@ -28,7 +28,7 @@ function SearchBar() {
   };
   
   const enterKey = (d) => {
-    if (d.keyCode == 13) {
+    if (d.keyCode === 13) {
       handleSearch()
     }
   

@@ -1,11 +1,15 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import Cookies from "js-cookie";
+import React, {useEffect} from 'react';
+import { useDispatch } from 'react-redux';
+import Cookies from 'js-cookie';
 import { logIn } from "../../redux/userActions";
 import { useNavigate } from "react-router-dom";
-import { Box, Button, Container, Link, TextField, Typography } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import "./index.css";
+import { Box, Button, Container, Link, TextField, Typography } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import './index.css';
+import { Link as RouterLink } from 'react-router-dom';
+import $ from 'jquery';
+import {animation} from "../../utils/animation";
+
 
 function SignIn() {
   const dispatch = useDispatch();
@@ -41,6 +45,13 @@ function SignIn() {
       .catch((error) => console.log("error", error));
   };
 
+  useEffect(() => {
+    animation();
+    $(window).on('resize', function(){
+      setTimeout(function(){ animation(); }, 500);
+    });
+  }, []);
+
   return (
     <>
       <Box
@@ -58,7 +69,9 @@ function SignIn() {
             component="a"
             startIcon={<ArrowBackIcon fontSize="small" />}
           >
-            <Link className="linkaccueil" href="/">
+            <Link className="linkaccueil" id="navbarSupportedContent" component={RouterLink} to="/" onClick={ function(){
+            setTimeout(function(){ animation(); });
+          }}>
               Accueil
             </Link>
           </Button>
@@ -70,7 +83,7 @@ function SignIn() {
             </Box>
             <TextField
               fullWidth
-              label="Email"
+              label="Email 📫"
               margin="normal"
               name="email"
               type="email"
@@ -78,7 +91,7 @@ function SignIn() {
             />
             <TextField
               fullWidth
-              label="Mot de Passe"
+              label="Mot de Passe 🔒"
               margin="normal"
               name="password"
               type="password"
@@ -98,7 +111,10 @@ function SignIn() {
             <div className="btnregister">
               <Link
                 className="linkinscription"
-                href="/inscription"
+                component={RouterLink} to="/inscription" onClick={ function(){
+                  setTimeout(function(){ animation(); });
+                }}
+                id="navbarSupportedContent"
                 variant="subtitle2"
                 underline="hover"
                 text="decoration"
