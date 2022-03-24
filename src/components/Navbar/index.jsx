@@ -25,8 +25,8 @@ const Navbar = () => {
       width: activeWidthNewAnimWidth + "px",
     });
     $("#navbarSupportedContent").on("click", "li", function (e) {
-      $("#navbarSupportedContent ul li").removeClass("active");
-      $(this).addClass("active");
+      $("#navbarSupportedContent ul li").removeClassName="active";
+      $(this).addClassname="active";
       var activeWidthNewAnimHeight = $(this).innerHeight();
       var activeWidthNewAnimWidth = $(this).innerWidth();
       var itemPosNewAnimTop = $(this).position();
