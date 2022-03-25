@@ -92,9 +92,9 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact" >
+              <NavLink className="nav-link" to="/Trott'eam" >
                 <i  className="far fa-address-book"></i>
-                Contact 
+                Trott'eam 
               </NavLink>
             </li>
           </ul>
@@ -131,12 +131,6 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/" onClick={() => { dispatch(logOut()); Cookies.remove('token'); Cookies.remove('id'); Cookies.remove('isLoggedIn') }} >
-                <i className="fas fa-sign-out-alt"></i>   
-                Déconnexion
-              </NavLink>
-            </li>
-            <li className="nav-item">
               <NavLink className="nav-link" to="/profile" >
                 <i  className="fas fa-user"> </i>
                 Profil
@@ -146,6 +140,12 @@ const Navbar = () => {
               <NavLink className="nav-link" to="/contact" >
                 <i  className="far fa-address-book"></i>
                 Contact 
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/" onClick={() => { dispatch(logOut()); Cookies.remove('token'); Cookies.remove('id'); Cookies.remove('isLoggedIn') }} >
+                <i className="fas fa-sign-out-alt"></i>   
+                Déconnexion
               </NavLink>
             </li>
           </ul>
