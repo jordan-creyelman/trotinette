@@ -15,7 +15,7 @@ const Navbar = () => {
   useEffect(() => {
     animation();
     $(window).on('resize', function(){
-      setTimeout(function(){ animation(); }, 500);
+      setTimeout(function(){ animation(); }, 5);
     });
   }, []);
   
@@ -133,4 +133,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-
