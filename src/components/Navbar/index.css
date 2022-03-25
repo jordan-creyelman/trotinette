@@ -181,3 +181,7 @@ h2{
 .btn{
   margin-left: 20px;
 }
+
+.navbar{
+  padding-bottom: 0rem !important;
+}
