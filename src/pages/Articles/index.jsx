@@ -37,8 +37,8 @@ export default function Articles() {
               <Card.Title>
                 <h1 style={{ color: "#78a638"}} >{article.name}</h1>
               </Card.Title>
-              <Card>
-                <h4 className="article.brand" >Marque: {article.brand}</h4>
+              <Card className="cardbrand">
+                <h4 className="article.brand" >Marque : {article.brand}</h4>
               </Card>
             </div>
             <div className="cardbodydescription">
