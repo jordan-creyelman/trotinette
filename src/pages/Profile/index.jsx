@@ -1,15 +1,10 @@
 import React from "react";
 import { Box, Button, Container, TextField, Typography } from "@mui/material";
-// import { useUserContext } from "../../UserContext";
 import "./index.css";
 
 const Profile = () => {
-  // const { user } = useUserContext()
 
   return (
-    // user && (
-    /* <p>{user.email}</p> */
-    // );
     <Box
       component="main"
       sx={{

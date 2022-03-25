@@ -6,26 +6,54 @@ import img3 from "../../assets/Img/logo trottinette.png";
 import { useDispatch, useSelector } from 'react-redux';
 import Cookies from "js-cookie";
 import { logOut } from '../../redux/userActions';
-import {animation} from "../../utils/animation";
 
 const Navbar = () => {
 
   const userToken = useSelector(state => state.token);
   const dispatch = useDispatch();
+  
+  function animation(){    
+    var tabsNewAnim = $('#navbarSupportedContent');
+    var activeItemNewAnim = tabsNewAnim.find('.active');
+    var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+    var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+    var itemPosNewAnimTop = activeItemNewAnim.position();
+    var itemPosNewAnimLeft = activeItemNewAnim.position();
+    $(".hori-selector").css({
+      "top":itemPosNewAnimTop.top + "px", 
+      "left":itemPosNewAnimLeft.left + "px",
+      "height": activeWidthNewAnimHeight + "px",
+      "width": activeWidthNewAnimWidth + "px"
+    });
+    $("#navbarSupportedContent").on("click","li",function(e){
+      $('#navbarSupportedContent ul li').removeClass("active");
+      $(this).addClass('active');
+      var activeWidthNewAnimHeight = $(this).innerHeight();
+      var activeWidthNewAnimWidth = $(this).innerWidth();
+      var itemPosNewAnimTop = $(this).position();
+      var itemPosNewAnimLeft = $(this).position();
+      $(".hori-selector").css({
+        "top":itemPosNewAnimTop.top + "px", 
+        "left":itemPosNewAnimLeft.left + "px",
+        "height": activeWidthNewAnimHeight + "px",
+        "width": activeWidthNewAnimWidth + "px"
+      });
+    });
+  }
   useEffect(() => {
     animation();
     $(window).on('resize', function(){
-      setTimeout(function(){ animation(); }, 500);
+      setTimeout(function(){ animation(); }, 5);
     });
   }, []);
-  
+
   let navbarItems;
   (userToken === null)?
     navbarItems = <>
         <NavLink className="navbar-brand navbar-logo " to="/" >
             <img src={img3} alt="Logo Trotti'NET" className='img-fluid'></img> 
         </NavLink>  
-         <h2>Trotti'NET</h2>             
+         <h2>Trotti'NET</h2>     
         <button 
           className="navbar-toggler"
           onClick={ function(){
@@ -62,11 +90,11 @@ const Navbar = () => {
                 <i className="fas fa-sign-in-alt"></i>   
                 Connexion
               </NavLink>
-            </li>            
+            </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/Trott'eam" >
+              <NavLink className="nav-link" to="/contact" >
                 <i  className="far fa-address-book"></i>
-                Trott'eam 
+                Contact 
               </NavLink>
             </li>
           </ul>
@@ -76,7 +104,7 @@ const Navbar = () => {
         <NavLink className="navbar-brand navbar-logo " to="/" >
             <img src={img3} alt="Logo Trotti'NET" className='img-fluid'></img> 
         </NavLink>  
-         <h2>Trotti'NET</h2>          
+         <h2>Trotti'NET</h2>     
         <button 
           className="navbar-toggler"
           onClick={ function(){
@@ -101,7 +129,7 @@ const Navbar = () => {
                 <i className="fas fa-home"></i>
                 Accueil
               </NavLink>
-            </li>            
+            </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/" onClick={() => { dispatch(logOut()); Cookies.remove('token'); Cookies.remove('id'); Cookies.remove('isLoggedIn') }} >
                 <i className="fas fa-sign-out-alt"></i>   
@@ -115,9 +143,9 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/Trott'eam" >
+              <NavLink className="nav-link" to="/contact" >
                 <i  className="far fa-address-book"></i>
-                Trott'eam 
+                Contact 
               </NavLink>
             </li>
           </ul>
@@ -133,4 +161,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-

@@ -1,14 +1,11 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
-import $ from 'jquery';
 import Cookies from 'js-cookie';
 import { logIn } from '../../redux/userActions';
 import { useNavigate } from "react-router-dom";
 import { Box, Button, Checkbox, Container, Link, TextField, Typography} from '@mui/material';
 import "./index.css";
 import { Link as RouterLink } from 'react-router-dom';
-import {animation} from "../../utils/animation";
-
 
 function SignUp() {
   const dispatch = useDispatch();
@@ -44,13 +41,6 @@ function SignUp() {
       })
       .catch((error) => console.log("error", error));
   };
-
-  useEffect(() => {
-    animation();
-    $(window).on('resize', function(){
-      setTimeout(function(){ animation(); }, 500);
-    });
-  }, []);
 
   return (
     <>
@@ -135,9 +125,8 @@ function SignUp() {
               <div className="login">
                 <Typography color="textSecondary" variant="body2">
                   Avez-vous un compte ?{" "}
-                  <Link component={RouterLink} to="/connexion" onClick={ function(){
-                  setTimeout(function(){ animation(); });
-                }} id="navbarSupportedContent">
+                  <Link component={RouterLink} to="/connexion" 
+                    id="navbarSupportedContent">
                     <Link
                       className="linksignup"
                       variant="subtitle2"
