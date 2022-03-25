@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="container">
           <div className="row">
             <div className="col">
-               <a target="_blank" rel="noreferrer" href="https://www.facebook.com">
+               <a target="_blank" rel="noreferrer" href="https://www.facebook.com/TrottiNet-107788118540054">
                  <h4><FaFacebook className="icon-footer"/></h4> 
               </a>
             </div>

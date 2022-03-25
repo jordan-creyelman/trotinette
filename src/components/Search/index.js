@@ -44,7 +44,7 @@ function SearchBar() {
             type="text"
             onChange={(e) => setPrice(e.target.value)}
             value={price}
-            placeholder="Recherche par Prix"
+            placeholder="Recherche"
             onKeyDown={(enterKey)}
           />
           <br />
