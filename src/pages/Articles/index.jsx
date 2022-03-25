@@ -39,7 +39,6 @@ export default function Articles() {
               </Card.Title>
               <Card>
                 <h4 >{article.brand}</h4> <br/>
-                
               </Card>
             </div>
             <div className="cardbodydescription">

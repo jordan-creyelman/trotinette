@@ -30,7 +30,6 @@ function SearchBar() {
     if (d.keyCode === 13) {
       handleSearch()
     }
-  
   }
 
   return (
@@ -49,10 +48,8 @@ function SearchBar() {
             <MdSearch className="search-icons" size="1.3em" />
           </button>
         </div>
-
         <div className="search__results">
-          <div className="search__result"></div>
-          <Row xs={1} md={4} className="g-4 row">
+          <Row xs={1} md={4} className="row">
             { arrayPost.map((post) => ( 
               <Col>
                 <div key={post.id}>
@@ -64,11 +61,11 @@ function SearchBar() {
                         alt=""
                         className="card_img"
                       />
-                      <Card.Text>
+                      <Card.Text className="descriptionhome">
                         {post.description.substring(0, 100) + "..."}
                       </Card.Text>
-                      <Card.Text>Prix :{post.price} €</Card.Text>
-                      <Button variant="primary"><Link to={`/articles/${post.id}`}>Details</Link></Button>
+                      <Card.Text className="pricehome">Prix : {post.price} €</Card.Text>
+                      <Button className="btnsearch"><Link className="linkdetail" to={`/articles/${post.id}`}>Details</Link></Button>
                     </Card.Body>
                   </Card>
                 </div>
