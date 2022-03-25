@@ -24,9 +24,6 @@ function SearchBar() {
       .catch((error) => {
         console.log(error);
       });
-    // setArrayPost(Price(arrayPost,price))
-    // // console.log(arrayPost)
-    // console.log(arrayPost[0].price)
   };
   
   const enterKey = (d) => {

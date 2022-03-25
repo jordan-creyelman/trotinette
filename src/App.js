@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Home from './pages/Home/index';
 import SignIn from './pages/SignIn/index';
-import SignOut from './pages/SignOut/index';
 import SignUp from './pages/SignUp/index';
 import Contact from './pages/Contact';
 import Articles from './pages/Articles';
@@ -25,7 +24,6 @@ function App() {
               <Route path="/" element={<Home />} /> 
               <Route path="/inscription" element={<SignUp />} /> 
               <Route path="/connexion" element={<SignIn />} /> 
-              <Route path="/deconnexion" element={<SignOut />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/articles/:id" element={<Articles />} />
               <Route path="/Trott'eam" element={<Contact />} />

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import Cookies from 'js-cookie';
 import { logIn } from "../../redux/userActions";
@@ -7,9 +7,6 @@ import { Box, Button, Container, Link, TextField, Typography } from '@mui/materi
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import './index.css';
 import { Link as RouterLink } from 'react-router-dom';
-import $ from 'jquery';
-import {animation} from "../../utils/animation";
-
 
 function SignIn() {
   const dispatch = useDispatch();
@@ -45,13 +42,6 @@ function SignIn() {
       .catch((error) => console.log("error", error));
   };
 
-  useEffect(() => {
-    animation();
-    $(window).on('resize', function(){
-      setTimeout(function(){ animation(); }, 500);
-    });
-  }, []);
-
   return (
     <>
       <Box
@@ -69,9 +59,8 @@ function SignIn() {
             component="a"
             startIcon={<ArrowBackIcon fontSize="small" />}
           >
-            <Link className="linkaccueil" id="navbarSupportedContent" component={RouterLink} to="/" onClick={ function(){
-            setTimeout(function(){ animation(); });
-          }}>
+            <Link className="linkaccueil" id="navbarSupportedContent" component={RouterLink} to="/" 
+          >
               Accueil
             </Link>
           </Button>
@@ -111,9 +100,7 @@ function SignIn() {
             <div className="btnregister">
               <Link
                 className="linkinscription"
-                component={RouterLink} to="/inscription" onClick={ function(){
-                  setTimeout(function(){ animation(); });
-                }}
+                component={RouterLink} to="/inscription" 
                 id="navbarSupportedContent"
                 variant="subtitle2"
                 underline="hover"

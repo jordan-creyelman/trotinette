@@ -24,7 +24,7 @@ export default function Articles() {
   });
     
    return (
-    <container>
+    <div className="container">
       <div className="Container1">
         <div className="img1">
           <Col>
@@ -38,27 +38,26 @@ export default function Articles() {
                 <h1 style={{ color: "#78a638"}} >{article.name}</h1>
               </Card.Title>
               <Card>
-                <h3 >{article.brand}</h3>
+                <h4 >{article.brand}</h4> <br/>
+                
               </Card>
             </div>
             <div className="cardbodydescription">
               <Card.Body>
+                <h5>{article.weight}</h5>weight <br/>
+                <h5>{article.battery_autonomy}</h5> battery_autonomy <br/>
+                <h5>{article.max_speed}</h5> max_speed <br/>
                 <h5>
                  {article.description}
                 </h5>
+                <h2>{article.price}</h2>
               </Card.Body>
+              <a href={article.scooter_url} target="_blank" rel='noopener
+                    noreferrer' className='hover'> site marchand </a>
             </div>
           </Col>
         </div>
       </div>
-    </container>
-
-      // <Container>
-      //   <Row>
-      //     <Col>1 of 2</Col>
-      //     <h1>francis</h1>
-      //     <Col>2 of 2</Col>
-      //   </Row>
-      // </Container>
+    </div>
   );
 }
