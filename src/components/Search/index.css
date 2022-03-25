@@ -1,40 +1,76 @@
 .card {
-    margin: 5rem;
-    width: 18rem;
-    bottom: 50px;
+  margin: 5rem;
+  width: 18rem;
 }
 
 .card_img {
-    margin: 0rem;
-    size: 286x180;
-    position: relative;
+  margin: 0rem;
+  width: 15rem !important;
+  max-width: 15rem !important;
+  height: 15rem !important;
+  max-height: 15rem !important;
 }
 
 .search {
-    display: flex;
-    align-items: center;
-    background-color: rgb(233, 233, 233);
-    border-radius: 20px;
-    padding: 5px;
-    margin-bottom: 1.5em;
-    margin-top: 10px;
-    margin-left: 30%;
-    margin-right: 30%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 20px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+  margin-top: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 .search input {
-    border: none;
-    background-color: rgb(233, 233, 233);
-    width: 100%;
+  border: none;
+  background-color: rgb(233, 233, 233);
+  width: 100%;
 }
 
 .search input:focus {
-    outline: none;
+  outline: none;
 }
 
 button {
-    background: none;
-    border: none;
-    cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
+.btnsearch {
+  color: #85bd39 !important;
+  background-color: black !important;
+  margin-left: 70% !important;
+}
+
+.btnhover:hover{
+  color: #85bd39 !important;
+}
+
+.row{
+  --bs-gutter-x: 0rem !important;
+}
+
+.descriptionhome{
+  padding: 1rem;
+  text-align: justify;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.pricehome{
+  margin-top: 1rem;
+  text-align: end;
+  font-size: 1.5rem;
+}
+
+.linkdetail{
+  background-color: black !important;
+  color:rgb(233, 233, 233);
+}
+
+.linkdetail:hover{
+  color: #85bd39 !important;
+}

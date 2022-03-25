@@ -1,28 +1,14 @@
-.Footer{
-    background-color: #000000 !important;
-    
-  position: absolute;
-  bottom: 0; 
-  width: 100%;
-  text-align: center;
+.main-footer{
+    color: #85bd39;
+    background-color: #000000;
+    padding-top: 0.5em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.icon-footer  {
+    color:#85bd39 ;
 }
 
-.contents {
-    flex: 1 0 auto;
-    }
 
-.MuiBox-root{
-    padding: 15px !important; 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-h4{
-    color: #8EC641 !important;
-    margin-top: 10px;
-}
-
-.about {
-    margin-bottom: 250px;
-}

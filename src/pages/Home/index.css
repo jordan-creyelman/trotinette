@@ -1,5 +1,36 @@
-/* .home {
-    padding: 5rem;
-    text-align: center;
-    
-} */
+.imghome {
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-bottom: 0.75%;
+}
+
+.boxhome{
+    display:flex;
+    flex-direction: row;
+    margin-top: 0%;
+}
+
+.description{
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-right: 5%;
+    text-align: justify;
+    font-size: 120%;
+}
+
+@media only screen and (max-width: 600px){
+    .boxhome{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 10%}
+    .imghome{
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .imghome{
+    margin-top: 10%;}
+}
