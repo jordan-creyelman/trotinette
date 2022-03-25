@@ -2,7 +2,6 @@ import React from "react";
 import "./index.css";
 import { FaGithub, FaFacebook } from "react-icons/fa";
 
-
 export default function Footer() {
   return (
       <div className="main-footer">
