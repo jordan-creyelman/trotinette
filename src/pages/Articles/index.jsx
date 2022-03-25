@@ -1,63 +1,59 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import  { useState }  from 'react';
+import  { useEffect, useState }  from 'react';
 import { Card, Col  } from "react-bootstrap";
 import "./index.css";
 
 export default function Articles() {
   const {id} = useParams();
   const [article, setArticle] = useState([]);
+  useEffect(()=>{
+    fetch(`https://apitrottinet.herokuapp.com/scooters/${id}`, {
+      method: "get",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((response) => response.json())
+    .then((res) => {
+      console.log(res);
+      setArticle(res);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  },[id]);
 
-  fetch(`https://apitrottinet.herokuapp.com/scooters/${id}`, {
-    method: "get",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-  .then((response) => response.json())
-  .then((res) => {
-    console.log(res);
-    setArticle(res);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-    
    return (
-    <div className="container">
-      <div className="Container1">
+    <div className="Container">
         <div className="img1">
           <Col>
-            <img src={article.image} style={{  size: "286x180" }} alt="imgtrotti"></img>
+            <img className="imgarticle" src={article.image} alt="imgtrotti"></img>
           </Col>
         </div>
-        <div className="cardbodytitle1">
+        <div className="cardbody">
           <Col>
             <div className="cardbodytitle">
               <Card.Title>
                 <h1 style={{ color: "#78a638"}} >{article.name}</h1>
               </Card.Title>
               <Card>
-                <h4 >{article.brand}</h4> <br/>
-                
+                <h4 className="article.brand" >Marque: {article.brand}</h4>
               </Card>
             </div>
             <div className="cardbodydescription">
               <Card.Body>
-                <h5>{article.weight}</h5>weight <br/>
-                <h5>{article.battery_autonomy}</h5> battery_autonomy <br/>
-                <h5>{article.max_speed}</h5> max_speed <br/>
-                <h5>
-                 {article.description}
-                </h5>
-                <h2>{article.price}</h2>
+                <h6 className="descriptionpost">Description : {article.description}</h6>
+                <h6 className="Smax">Vitesse Max : {article.max_speed} Km/h</h6> 
+                <h6 className="battery">Battery Autonomie : {article.battery_autonomy} Heures</h6> 
+                <h6 className="weight">Poids : {article.weight} Kilo</h6> 
+                <h6 className="Price">Prix : {article.price} €</h6>
               </Card.Body>
               <a href={article.scooter_url} target="_blank" rel='noopener
-                    noreferrer' className='hover'> site marchand </a>
+                    noreferrer' className="click"> Si vous la désirez = Cliquez ICI</a>
             </div>
           </Col>
         </div>
-      </div>
     </div>
   );
 }
