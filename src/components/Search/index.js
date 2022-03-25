@@ -3,10 +3,12 @@ import { Button, Card, Col, Row } from "react-bootstrap";
 import { MdSearch } from "react-icons/md";
 import Price from "./Price.js";
 import "./index.css";
+import {Link} from 'react-router-dom';
 
 function SearchBar() {
   const [price, setPrice] = useState("");
   const [arrayPost, setArrayPost] = useState([]);
+
   const handleSearch = () => {
     fetch("https://apitrottinet.herokuapp.com/scooters", {
       method: "get",
@@ -54,7 +56,7 @@ function SearchBar() {
         <div className="search__results">
           <div className="search__result"></div>
           <Row xs={1} md={4} className="g-4 row">
-            {arrayPost.map((post) => (
+            { arrayPost.map((post) => ( 
               <Col>
                 <div key={post.id}>
                   <Card key={post.id} className="card">
@@ -69,7 +71,7 @@ function SearchBar() {
                         {post.description.substring(0, 100) + "..."}
                       </Card.Text>
                       <Card.Text>Prix :{post.price} €</Card.Text>
-                      <Button variant="primary">Details</Button>
+                      <Button variant="primary"><Link to={`/articles/${post.id}`}>Details</Link></Button>
                     </Card.Body>
                   </Card>
                 </div>
@@ -77,7 +79,7 @@ function SearchBar() {
             ))}
           </Row>
         </div>
-      </>
+      </> 
     </div>
   );
 }

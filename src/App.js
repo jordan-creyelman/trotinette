@@ -27,7 +27,7 @@ function App() {
               <Route path="/connexion" element={<SignIn />} /> 
               <Route path="/deconnexion" element={<SignOut />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/articles" element={<Articles />} />
+              <Route path="/articles/:id" element={<Articles />} />
               <Route path="/Trott'eam" element={<Contact />} />
               <Route path="*" element={<Home />} />
             </Routes>  
