@@ -7,7 +7,6 @@ import { Box, Button, Checkbox, Container, Link, TextField, Typography} from '@m
 import "./index.css";
 import { Link as RouterLink } from 'react-router-dom';
 
-
 function SignUp() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
