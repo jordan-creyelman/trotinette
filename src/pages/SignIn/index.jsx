@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import Cookies from 'js-cookie';
 import { logIn } from "../../redux/userActions";
 import { useNavigate } from "react-router-dom";
-import { Box, Button, Container, Link, TextField, Typography } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Box, Button, Container, TextField, Typography } from '@mui/material';
 import './index.css';
-import { Link as RouterLink } from 'react-router-dom';
+import $ from 'jquery';
+import {animation} from "../../utils/animation";
 
 function SignIn() {
   const dispatch = useDispatch();
@@ -36,11 +36,18 @@ function SignIn() {
           });
           Cookies.set("isLoggedIn", true, { sameSite: "lax" });
           dispatch(logIn(Cookies.get("token")));
-          navigate("/");
+          setTimeout(function(){ animation(navigate("/")); });
         } else alert("Quelque chose s'est mal passé");
       })
       .catch((error) => console.log("error", error));
   };
+
+  useEffect(() => {
+    animation();
+    $(window).on('resize', function(){
+      setTimeout(function(){ animation(); }, 5);
+    });
+  }, []);
 
   return (
     <>
@@ -53,17 +60,7 @@ function SignIn() {
           minHeight: "100%",
         }}
       >
-        <Container maxWidth="sm">
-          <Button
-            className="btnaccueil"
-            component="a"
-            startIcon={<ArrowBackIcon fontSize="small" />}
-          >
-            <Link className="linkaccueil" id="navbarSupportedContent" component={RouterLink} to="/" 
-          >
-              Accueil
-            </Link>
-          </Button>
+        <Container maxWidth="sm">          
           <form onSubmit={submitInfo}>
             <Box sx={{ my: 1 }}>
               <Typography color="textPrimary" variant="h4">
@@ -96,22 +93,7 @@ function SignIn() {
               >
                 Se connecter
               </Button>
-            </Box>
-            <div className="btnregister">
-              <Link
-                className="linkinscription"
-                component={RouterLink} to="/inscription" 
-                id="navbarSupportedContent"
-                variant="subtitle2"
-                underline="hover"
-                text="decoration"
-                sx={{
-                  cursor: "pointer",
-                }}
-              >
-                Inscription
-              </Link>
-            </div>
+            </Box>            
           </form>
         </Container>
       </Box>
