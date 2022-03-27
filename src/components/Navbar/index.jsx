@@ -6,40 +6,14 @@ import img3 from "../../assets/Img/logo trottinette.png";
 import { useDispatch, useSelector } from 'react-redux';
 import Cookies from "js-cookie";
 import { logOut } from '../../redux/userActions';
+import {animation} from "../../utils/animation";
+import '../../utils/animation/index.css';
 
 const Navbar = () => {
 
   const userToken = useSelector(state => state.token);
   const dispatch = useDispatch();
   
-  function animation(){    
-    var tabsNewAnim = $('#navbarSupportedContent');
-    var activeItemNewAnim = tabsNewAnim.find('.active');
-    var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
-    var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
-    var itemPosNewAnimTop = activeItemNewAnim.position();
-    var itemPosNewAnimLeft = activeItemNewAnim.position();
-    $(".hori-selector").css({
-      "top":itemPosNewAnimTop.top + "px", 
-      "left":itemPosNewAnimLeft.left + "px",
-      "height": activeWidthNewAnimHeight + "px",
-      "width": activeWidthNewAnimWidth + "px"
-    });
-    $("#navbarSupportedContent").on("click","li",function(e){
-      $('#navbarSupportedContent ul li').removeClass("active");
-      $(this).addClass('active');
-      var activeWidthNewAnimHeight = $(this).innerHeight();
-      var activeWidthNewAnimWidth = $(this).innerWidth();
-      var itemPosNewAnimTop = $(this).position();
-      var itemPosNewAnimLeft = $(this).position();
-      $(".hori-selector").css({
-        "top":itemPosNewAnimTop.top + "px", 
-        "left":itemPosNewAnimLeft.left + "px",
-        "height": activeWidthNewAnimHeight + "px",
-        "width": activeWidthNewAnimWidth + "px"
-      });
-    });
-  }
   useEffect(() => {
     animation();
     $(window).on('resize', function(){
@@ -50,8 +24,10 @@ const Navbar = () => {
   let navbarItems;
   (userToken === null)?
     navbarItems = <>
-        <NavLink className="navbar-brand navbar-logo " to="/" >
-            <img src={img3} alt="Logo Trotti'NET" className='img-fluid'></img> 
+        <NavLink className="navbar-brand navbar-logo " to="/" onClick={ function(){
+            setTimeout(function(){ animation(); });
+          }} >
+          <img src={img3} alt="Logo Trotti'NET" className='img-fluid'></img> 
         </NavLink>  
          <h2>Trotti'NET</h2>     
         <button 
@@ -137,13 +113,13 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact" >
+              <NavLink className="nav-link" to="/trott'eam" >
                 <i  className="far fa-address-book"></i>
                 Contact 
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/" onClick={() => { dispatch(logOut()); Cookies.remove('token'); Cookies.remove('id'); Cookies.remove('isLoggedIn') }} >
+              <NavLink className="nav-link" to="/trott'eam" onClick={() => { dispatch(logOut()); Cookies.remove('token'); Cookies.remove('id'); Cookies.remove('isLoggedIn') }} >
                 <i className="fas fa-sign-out-alt"></i>   
                 Déconnexion
               </NavLink>
