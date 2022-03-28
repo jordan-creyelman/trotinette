@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+Trotti'net - Le comparateur de trottinettes électriques qui révolutionne les trottoirs !
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+L'idée est venue du constat que de nos jours de plus en plus de monde essaye de rouler de manière écolo, et au-delà des vélos mécaniques et électriques, un moyen de locomotion plus "cool" a fait son apparition sur nos routes et trottoirs :
+LES TROTTINETTES !
+Ainsi, nous souhaitons proposer au grand public une plateforme qui compare un maximum d'offres concernant ce produit afin que les internautes puissent acheter une trottinette qui leur convient, en toute sécurité ! Pléthore d'offres et de prix pullulent sur le web, et nous pensons qu'aider les internautes à s'y retrouver dans cette nouvelle jungle est important, surtout pour éviter les abus et malfaçons !
 
-## Available Scripts
+Trotti'net - Le comparateur de trottinettes électriques qui révolutionne les trottoirs !
 
-In the project directory, you can run:
+L'idée est venue du constat que de nos jours de plus en plus de monde essaye de rouler de manière écolo, et au-delà des vélos mécaniques et électriques, un moyen de locomotion plus "cool" a fait son apparition sur nos routes et trottoirs :
+LES TROTTINETTES !
+Ainsi, nous souhaitons proposer au grand public une plateforme qui compare un maximum d'offres concernant ce produit afin que les internautes puissent acheter une trottinette qui leur convient, en toute sécurité ! Pléthore d'offres et de prix pullulent sur le web, et nous pensons qu'aider les internautes à s'y retrouver dans cette nouvelle jungle est important, surtout pour éviter les abus et malfaçons !
 
-### `npm start`
+Accéder à l'application en production héberger par
+ <a href="https://trottinet.herokuapp.com/" class="button danger">HEROKU</a>
+ <a href="https://trottinet.vercel.app/" class="button danger">VERCEL</a> 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Accéder à l' API en production héberger par
+<a href="https://apitrottinet.herokuapp.com/scooters" class="button danger">HEROKU</a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+LA TEAM :
+ - <a href="https://github.com/jordan-creyelman">Jordan Creyelman</a>, ou "le codeur fou" : Après avoir survécu aux 3 premiers mois à THP en fullstack, Jordan ressort des semaines de NEXT encore plus puissant qu'avant, avec un code plus propre et efficace, et des ambitions plus grandes ! Il est toujours aussi fou de back !
+ - <a href="https://github.com/HaryRabarijoely">Hary Andrianarisoa</a>, ou "le technicien 24/7" : Bon vivant du côté de Marseille, Hary est un homme manuel qui a été dans la carrosserie pendant quelques années. Fortement intéressé par les mondes informatiques et technologiques, il s'est donc mis en mission pour se reconvertir et suivre ses passions ! Il aime voir de beaux sites et apprécie plus particulièrement le front !
+ - <a href="https://github.com/kalu6334">Lucas Martin</a>, ou "le Je(u)di du back" : Montpelliérain électricien, il est entré à THP en septembre dernier pour se reconvertir avec 0 connaissances. A force de persévérance et d'assiduité, il est devenu un touche à tout efficace qui continue d'évoluer ! Ah et il apparaît surtout le jeudi !
+ - <a href="https://github.com/JulienRouet">Julien ROUET</a>, ou “Saint Francis” : Sudiste du côté de Perpignan, il faisait des chocolatines par le passé, mais à décider de tenter l’aventure THP pour voir ce qui pourrait lui plaire dans le monde du développement web, et de l’informatique même, puis pourquoi pas travailler dans le secteur ! Après 6 mois de bataille, il a acquis nombre de compétences, notamment en front où il expérimente bien des choses ! 
+ - <a href="https://github.com/Nicoclos">Nicolas Bia</a>, ou "the touriste" : Toujours en vie après les 3 premiers mois de THP, Nicolas a connus plus de difficultés pendant NEXT mais a su s'accrocher pour tenir jusqu'au bout. Il continue de faire son petit bout de chemin avec son petit niveau, et de progresser à son rythme !
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
