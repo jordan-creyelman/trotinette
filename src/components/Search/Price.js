@@ -11,7 +11,7 @@
       if(Math.round(arrayScooter[i].price)===price ||Math.round(arrayScooter[i].price)===pricePlus){
           results.push(i); 
       }
-      if(results.length ===2){
+      if(results.length ===4){
         find =true;
       }
       if(i===arrayScooter.length-1&&find ===false){
